@@ -1,0 +1,113 @@
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #add8e6;
+}
+
+#title {
+	text-align: center;
+	margin: 0;
+	font: 4em 'Indie Flower', cursive;
+	animation: titleAppear 8s ease 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes titleAppear {
+	0% {
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.form-container {
+	margin: auto;
+	text-align: center;
+}
+
+#listItem {
+	padding-right: 1em;
+}
+
+#addBtn {
+	margin: 1em;
+}
+
+#shoppingList {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	border: 0;
+	border-radius: 10px;
+	background: url(images/background-2.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	text-align: center;
+	animation: expandTopToBottom 3s ease-in-out 1 forwards;
+}
+
+@keyframes expandTopToBottom {
+	0% {
+		height: 0vh;
+	}
+
+	70% {
+		
+		height: 100vh;
+		
+	}
+
+	95% {
+		height: 75vh;
+	}
+
+	100% {
+		min-height: 75vh;
+		height: auto;
+	}
+}
+
+#list-content {
+	padding: 0 2em 1em;
+	text-align: left;
+	font: 3em 'Indie Flower', cursive;
+	text-transform: capitalize;
+}
+
+#footer-main {
+	width: 100%;
+	min-height: 50px;
+	box-sizing: border-box;
+	padding: 1em;
+	margin-top: 2em;	
+	background-color: #000;
+	color: #fff;
+	font-family: verdana, sans-serif, serif;
+}
+
+/*  Print button only prints the shopping list  */
+
+@media print {
+        body * {
+          display:none;
+        }
+
+        body .printable {
+          display:block;
+        }
+      }
+
+/*  Larger Screens  */
+
+@media only screen and (min-width: 768px) {
+	#shoppingList {
+		width: 70%;
+		
+	}
+}
