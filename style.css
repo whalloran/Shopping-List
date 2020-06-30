@@ -3,14 +3,14 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: #add8e6;
+	font-family: Arial, sans-serif, serif;
 }
 
 #title {
-	text-align: center;
 	margin: 0;
+	text-align: center;
 	font: 4em 'Indie Flower', cursive;
-	animation: titleAppear 8s ease 1;
-	animation-fill-mode: forwards;
+	animation: titleAppear 5s ease-in 1 forwards;
 }
 
 @keyframes titleAppear {
@@ -21,14 +21,15 @@ body {
 	10% {
 		opacity: 0;
 	}
-
+	
 	100% {
 		opacity: 1;
 	}
 }
 
 .form-container {
-	margin: auto;
+	margin: 1em auto;
+	width: 100%;
 	text-align: center;
 }
 
@@ -36,8 +37,20 @@ body {
 	padding-right: 1em;
 }
 
-#addBtn {
-	margin: 1em;
+.mainBtns {
+	margin: .5em;
+}
+
+#printView #shoppingList h1 {
+	animation: none;
+}
+
+#settings {
+	display: none;
+}
+
+#settings-toggle {
+	text-decoration: none;
 }
 
 #shoppingList {
@@ -91,23 +104,17 @@ body {
 	font-family: verdana, sans-serif, serif;
 }
 
-/*  Print button only prints the shopping list  */
+/*  Print Preview Window  */
 
-@media print {
-        body * {
-          display:none;
-        }
-
-        body .printable {
-          display:block;
-        }
-      }
+#printView {
+	background-color: #fff;
+	font-family: 'Indie Flower', cursive;
+}
 
 /*  Larger Screens  */
 
 @media only screen and (min-width: 768px) {
-	#shoppingList {
+	#shoppingList, .form-container {
 		width: 70%;
-		
 	}
 }
