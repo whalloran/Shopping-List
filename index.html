@@ -2,41 +2,52 @@
 <html>
 <head>
 	<title>Shopping List</title>
+	<meta charset="utf-8" lang="en">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body onload="pageLoad()">
 
 	
 	<div class="form-container" style="max-width: 100%;">
 		<form id="form">
 			<input type="text" name="listItem" id="listItem">
-			<button type="button" onclick="addToList()" id="addBtn">Add to List</button>
-			<button id="btnSubmit" type="button" onclick="printList();">Print List</button>
+			<button type="button" onclick="addToList()" id="addBtn" class="mainBtns">Add to List</button>
+			<button id="removeLastBtn" type="button" onclick="removeLast()" class="mainBtns">Remove Last</button>
+			<button id="btnSubmit" type="button" onclick="printList()" class="mainBtns">Print List</button>
+			
 		</form>
+		<p style="text-align: left;" id="settings-div"><a href="#" id="settings-toggle" onclick="settings()">+ Settings</a></p>
 		<form id="settings">
-			Add items to: 
+			
+			<span>Add items to: </span>
 			<input type="radio" id="bottom" name="addSort" value="bottom" checked>
 			<label for="bottom">Bottom</label>
 			<input type="radio" id="top" name="addSort" value="top">
 			<label for="top">Top</label>
+			<p><input type="checkbox" id="capitalize" name="capitalize">
+			   <label for="capitalize">Capitalize List Items</label>
+			   <br>
+			   <button type="button" id="update" onclick="updateSettings()">Update</button>
+			</p>
 			
 		</form>
 		<p></p>
 	</div>
-	<div id="shoppingList" style="max-width: 100%">
+	<div id="shoppingList">
 		<h1 id="title">My Shopping List</h1>
 		<ol id="list-content"></ol>
 	</div>
 	
 	<footer id="footer-main">
-		Created by
+		Created by whalloran
 	</footer>
 
 
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
 <script type="text/javascript" src="list.js"></script>
+<!--  <script type="text/javascript" src="settings.js"></script>   -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
 </body>
