@@ -8,6 +8,7 @@ body {
 
 #title {
 	margin: 0;
+	padding: 1rem;
 	text-align: center;
 	font: 4em 'Indie Flower', cursive;
 	animation: titleAppear 5s ease-in 1 forwards;
@@ -21,7 +22,7 @@ body {
 	10% {
 		opacity: 0;
 	}
-	
+
 	100% {
 		opacity: 1;
 	}
@@ -71,9 +72,9 @@ body {
 	}
 
 	70% {
-		
+
 		height: 100vh;
-		
+
 	}
 
 	95% {
@@ -98,7 +99,7 @@ body {
 	min-height: 50px;
 	box-sizing: border-box;
 	padding: 1em;
-	margin-top: 2em;	
+	margin-top: 2em;
 	background-color: #000;
 	color: #fff;
 	font-family: verdana, sans-serif, serif;
